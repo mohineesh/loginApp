@@ -1,0 +1,49 @@
+input[type="password"]{
+    margin-left: 6px;
+}
+.login{
+    position: absolute;
+    margin: auto;
+    background-color: floralwhite;
+    top:0;
+    right:0;
+    left:0;
+    bottom:0;
+    width:300px;
+    height: 144px;
+    padding:10px;
+    border-radius: 10px;
+    border:1px solid #1574b1;
+}
+
+.save-button{
+    padding:5px;
+    border-radius: 5px;
+    margin: 0 auto;
+    display: block;
+    margin-top:5px;
+    background-color: #1574b1;
+    color:#fff;
+    margin-top:7px;
+}
+.disable-button{
+    padding:5px;
+    border-radius: 5px;
+    margin: 0 auto;
+    display: block;
+    margin-top:5px;
+    background-color: #ccc;
+    color:#fff;
+    margin-top:7px;
+}
+.userName{
+    height: 37px;
+    padding:10px;
+}
+.password{
+    padding-left:10px;
+    height: 37px;
+}
+.error{
+    color: red;
+}

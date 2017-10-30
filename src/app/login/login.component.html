@@ -1,0 +1,27 @@
+<form #myForm = "ngForm">
+<div class="login">
+    <div *ngIf="passwordWrong" class="error">Password is wrong</div>
+    <div class="userName">
+        UserName : <input id="name" name="name" type = "text" [(ngModel)] = "user.name" #name="ngModel" required>
+        <div class="error" *ngIf="name.invalid && (name.dirty || name.touched)">
+               <div *ngIf ="name.errors.required">
+                   Name is Required
+               </div>
+        </div>
+    </div>
+    <div class="password">
+        Password : <input id="password" name="password" type ="password" [(ngModel)] ="user.password" #password="ngModel" required minlength="4">
+        <div class="error" *ngIf="password.invalid && (password.dirty || password.touched)">
+            <div *ngIf="password.errors.minlength">
+                   password must be atleast 4 characters
+            </div>
+            <div *ngIf="password.errors.required">
+                   password is required
+            </div>
+        </div>
+    </div>
+    <div class="alignButton">
+        <button [disabled]="!myForm.form.valid" [ngClass]="!myForm.form.valid ?'disable-button':'save-button'" (click)="validateUser(user)">Login</button>
+    </div>
+</div>
+</form>
